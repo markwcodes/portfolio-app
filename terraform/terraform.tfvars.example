@@ -1,0 +1,12 @@
+## See variables.tf for descriptions
+
+do_token = "X"
+spaces_access_token = "X"
+spaces_secret_key = "X"
+tf_state_bucket = "X"
+region = "SYD1"
+
+app_name = "<your computer-friendly app name>"
+friendly_app_name = "<your human-friendly app name>"
+environment = "<production/development>"
+
