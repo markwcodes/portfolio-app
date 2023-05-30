@@ -45,3 +45,27 @@ variable "environment" {
   default     = "development"
 }
 
+variable "vpc_ip_range" {
+  description = "The range of IP addresses for the VPC"
+  type        = string
+  default     = "10.0.0.0/16"
+}
+
+variable "container_registry_plan" {
+  description = "Container registry pricing tier (starter/basic/professional)"
+  type        = string
+  default     = "starter"
+}
+
+variable "kubernetes_version" {
+  description = "Kubernetes version number prefix"
+  type        = string
+  default     = "1."
+}
+
+variable "node_pool_droplet_size" {
+  description = "Node pool droplet size"
+  type        = string
+  default     = "s-1vcpu-2gb-amd" # Droplet sizes: https://slugs.do-api.dev/
+}
+

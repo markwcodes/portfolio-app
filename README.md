@@ -30,7 +30,7 @@ Cost is a key consideration, and therefore I have chosen to use DigitalOcean as 
    `terraform workspace new production`
 9. Check your Space storage to ensure the remote state file has been added
 
-#### Alternative ENV based method (for CI/CD environments). Set these **private** environment variables:
+#### Alternative ENV based method (for CI/CD environments).
 
 Create these **private** environment variables:
 

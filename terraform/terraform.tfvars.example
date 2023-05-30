@@ -10,3 +10,12 @@ app_name = "<your computer-friendly app name>"
 friendly_app_name = "<your human-friendly app name>"
 environment = "<production/development>"
 
+vpc_ip_range = "10.0.0.0/16"
+container_registry_plan = "<starter/basic/professional>"
+kubernetes_version = "1."
+node_pool_droplet_size = "<droplet sizes: https://slugs.do-api.dev/>"
+
+public_data_bucket = "X"
+db_name = "X"
+db_user = "X"
+db_password = "X"
