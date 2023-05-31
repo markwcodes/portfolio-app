@@ -31,6 +31,10 @@ jobs:
           -backend-config="access_key=$TF_VAR_spaces_access_token" \
           -backend-config="secret_key=$TF_VAR_spaces_secret_key" \
           -backend-config="bucket=$TF_VAR_tf_state_bucket"
+        env:
+          TF_VAR_spaces_access_token: ${{ vars.TF_VAR_SPACES_ACCESS_TOKEN }}
+          TF_VAR_spaces_secret_key: ${{ vars.TF_VAR_SPACES_SECRET_KEY }}
+          TF_VAR_tf_state_bucket: ${{ vars.TF_VAR_TF_STATE_BUCKET }}
 
       - name: Terraform Validate
         id: validate
