@@ -5,6 +5,10 @@ on:
 
 env:
   tf_actions_working_dir: terraform/
+  TF_VAR_do_token: ${{ secrets.TF_VAR_DO_TOKEN }}
+  TF_VAR_spaces_access_token: ${{ secrets.TF_VAR_SPACES_ACCESS_TOKEN }}
+  TF_VAR_spaces_secret_key: ${{ secrets.TF_VAR_SPACES_SECRET_KEY }}
+  TF_VAR_tf_state_bucket: ${{ secrets.TF_VAR_TF_STATE_BUCKET }}
 
 jobs:
   plan-tf-infra:
@@ -31,10 +35,6 @@ jobs:
           -backend-config="access_key=$TF_VAR_spaces_access_token" \
           -backend-config="secret_key=$TF_VAR_spaces_secret_key" \
           -backend-config="bucket=$TF_VAR_tf_state_bucket"
-        env:
-          TF_VAR_spaces_access_token: ${{ secrets.TF_VAR_SPACES_ACCESS_TOKEN }}
-          TF_VAR_spaces_secret_key: ${{ secrets.TF_VAR_SPACES_SECRET_KEY }}
-          TF_VAR_tf_state_bucket: ${{ secrets.TF_VAR_TF_STATE_BUCKET }}
 
       - name: Terraform Validate
         id: validate
