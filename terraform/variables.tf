@@ -54,7 +54,7 @@ variable "vpc_ip_range" {
 variable "kubernetes_version" {
   description = "Kubernetes version number prefix"
   type        = string
-  default     = "1."
+  default     = "1.27."
 }
 
 variable "node_pool_droplet_size" {
