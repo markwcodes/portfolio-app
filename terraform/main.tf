@@ -38,7 +38,7 @@ resource "digitalocean_kubernetes_cluster" "cluster" {
   }
 
   node_pool {
-    name       = format("%s-core", var.app_name)
+    name       = format("%s-%s-core", var.app_name, var.environment)
     size       = var.node_pool_droplet_size
     node_count = 2
     # auto_scale = var.auto_scale
