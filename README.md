@@ -14,6 +14,26 @@ Cost is a key consideration, and therefore I have chosen to use DigitalOcean as 
 
 # Setup instructions
 
+## Running the site locally
+
+This site runs locally in docker utilising configuration from [Laravel Sail](https://laravel.com/docs/sail).
+
+1. Copy the environment file example `.env.example` to `.env`
+2. Install php/composer locally, and run `composer install`
+3. Add the `sail` alias to your .zshrc/.bashrc file:\
+   `alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'`
+4. Configure and bring up your docker containers:
+
+```
+sail up && \
+sail artisan key:generate && \
+sail artisan migrate && \
+sail npm install && \
+sail npm run dev
+```
+
+5. The site should now be accessible at [portfolio.test](http://portfolio.test)
+
 ## Terraform initialisation
 
 #### In the DigitalOcean web interface:
