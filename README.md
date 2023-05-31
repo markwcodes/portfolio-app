@@ -2,7 +2,7 @@
 
 ## About this project
 
-[mark.wilson.codes](https://mark.wilson.codes) was created to provide a professional online presence for myself and act as a showcase of skills. The name tells you who I am and what I do!
+[mark.wilson.codes](https://mark.wilson.codes) was created as a professional demonstration of dev-ops and web development skills and a testing ground for new ideas. The name also tells you who I am and what I do!
 
 My goal with this portfolio project is to create a HA (high availability), scalable, Kubernetes cluster, with infrastructure and deployments managed by Terraform and Helm.\
 There will be a strong focus on back-end development and dev-ops, with a few interactive demos displaying front-end/back-end coding skills.
