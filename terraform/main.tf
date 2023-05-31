@@ -18,12 +18,6 @@ resource "digitalocean_vpc" "vpc" {
   ip_range = var.vpc_ip_range
 }
 
-resource "digitalocean_container_registry" "this" {
-  name                   = format("%s-%s", var.app_name, var.environment)
-  subscription_tier_slug = var.container_registry_plan
-  region                 = var.region
-}
-
 data "digitalocean_kubernetes_versions" "this" {
   version_prefix = var.kubernetes_version
 }
