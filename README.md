@@ -66,3 +66,9 @@ terraform init \
  -backend-config="secret_key=$TF_VAR_spaces_secret_key" \
  -backend-config="bucket=$TF_VAR_tf_state_bucket"
 ```
+
+## Terraform plan, build, and deployment
+
+Terraform infrastructure changes should always be done from a single location (Github Actions) for safety and consistency of state. However if you configure your another environment with the same ENVs it is possible to manage infrastructure changes from your local machine (for emergencies).
+
+WIP - coming soon :)
