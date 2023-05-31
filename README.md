@@ -69,6 +69,6 @@ terraform init \
 
 ## Terraform plan, build, and deployment
 
-Terraform infrastructure changes should always be done from a single location (Github Actions) for safety and consistency of state. However if you configure your another environment with the same ENVs it is possible to manage infrastructure changes from your local machine (for emergencies).
+Terraform infrastructure changes should always be done from a single location (Github Actions) for safety and consistency of state. However if you configure your local environment with the same ENVs it is possible to manage infrastructure changes from your local machine (for emergencies).
 
 WIP - coming soon :)
