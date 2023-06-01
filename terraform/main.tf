@@ -9,7 +9,12 @@ resource "digitalocean_project_resources" "resources" {
   # AppPlatformApp, Bucket, Database, Domain, DomainRecord, Droplet, Firewall, FloatingIp, Image, Kubernetes, LoadBalancer, MarketplaceApp, Saas, Volume
   resources = [
     digitalocean_kubernetes_cluster.cluster.urn,
+    digitalocean_domain.primary_domain.urn,
   ]
+}
+
+resource "digitalocean_domain" "primary_domain" {
+  name = var.primary_domain
 }
 
 resource "digitalocean_vpc" "vpc" {

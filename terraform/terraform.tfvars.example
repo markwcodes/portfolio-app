@@ -10,6 +10,7 @@ app_name = "<your computer-friendly app name>"
 friendly_app_name = "<your human-friendly app name>"
 environment = "<production/development>"
 
+primary_domain = "example.com"
 vpc_ip_range = "10.0.0.0/16"
 kubernetes_version = "1.27."
 node_pool_droplet_size = "<droplet sizes: https://slugs.do-api.dev/>"

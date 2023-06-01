@@ -45,6 +45,11 @@ variable "environment" {
   default     = "development"
 }
 
+variable "primary_domain" {
+  description = "Primary domain name"
+  type        = string
+}
+
 variable "vpc_ip_range" {
   description = "The range of IP addresses for the VPC"
   type        = string
