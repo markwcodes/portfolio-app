@@ -32,7 +32,9 @@ sail npm install && \
 sail npm run dev
 ```
 
-5. The site should now be accessible at [portfolio.test](http://portfolio.test)
+6. Edit your `/etc/hosts` file and add\
+   `127.0.0.1  portfolio.test`
+7. The site should now be accessible at [portfolio.test](http://portfolio.test)
 
 ## Terraform initialisation
 
