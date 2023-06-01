@@ -12,10 +12,11 @@ env:
 
 jobs:
   plan-tf-infra:
+    if: ${{ false }} # disable for now
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ${{ env.tf_actions_working_dir }}
+        working-directory: ${{ env.tf_actions_working_dir }} # remove?
     permissions:
       pull-requests: write
       contents: read
