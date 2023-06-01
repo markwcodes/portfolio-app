@@ -68,3 +68,20 @@ variable "node_pool_droplet_size" {
   default     = "s-1vcpu-2gb-amd" # Droplet sizes: https://slugs.do-api.dev/
 }
 
+variable "node_pool_auto_scale" {
+  description = "Whether the node pool should auto-scale up and down based on demand"
+  type        = bool
+  default     = true
+}
+
+variable "node_pool_min_nodes" {
+  description = "Minimum number of nodes in node pool"
+  type        = number
+  default     = 1
+}
+
+variable "node_pool_max_nodes" {
+  description = "Maximum number of nodes in node pool"
+  type        = number
+  default     = 5
+}

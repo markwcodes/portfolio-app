@@ -28,10 +28,9 @@ data "digitalocean_kubernetes_versions" "this" {
 }
 
 resource "digitalocean_kubernetes_cluster" "cluster" {
-  name                 = format("%s-%s", var.app_name, var.environment)
-  region               = var.region
-  vpc_uuid             = digitalocean_vpc.vpc.id
-  registry_integration = true
+  name     = format("%s-%s", var.app_name, var.environment)
+  region   = var.region
+  vpc_uuid = digitalocean_vpc.vpc.id
 
   version       = data.digitalocean_kubernetes_versions.this.latest_version
   auto_upgrade  = true
@@ -45,9 +44,9 @@ resource "digitalocean_kubernetes_cluster" "cluster" {
   node_pool {
     name       = format("%s-%s-core", var.app_name, var.environment)
     size       = var.node_pool_droplet_size
-    node_count = 2
-    # auto_scale = var.auto_scale
-    # min_nodes  = var.min_nodes
-    # max_nodes  = var.max_nodes
+    node_count = 1
+    auto_scale = var.node_pool_auto_scale
+    min_nodes  = var.node_pool_min_nodes
+    max_nodes  = var.node_pool_max_nodes
   }
 }
