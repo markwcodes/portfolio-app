@@ -1,6 +1,9 @@
 # Portfolio Site for [mark.wilson.codes](https://mark.wilson.codes)
 
-## About this project
+### 🚧 This site is under *active* development 🚧
+#### Check out the [commit log](https://github.com/markwcodes/portfolio-app/commits/master) or [project page](https://github.com/users/markwcodes/projects/1/) to see current progress.
+
+## About
 
 [mark.wilson.codes](https://mark.wilson.codes) was created as a professional demonstration of dev-ops and web development skills and a testing ground for new ideas. The name also tells you who I am and what I do!
 
