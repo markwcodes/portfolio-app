@@ -1,0 +1,33 @@
+name: "Build and Deploy Application"
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Environment to deploy to"
+        required: true
+        default: "production"
+        type: environment
+      tag-version:
+        description: "Version tag for this release (v1.2.34)"
+        required: true
+        type: string
+
+jobs:
+  containerise-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build Docker image
+        run: |
+          docker build -t ${{ github.actor }}/portfolio-app:latest
+      - name: Push Docker image
+        run: |
+          docker tag ${{ github.actor }}/portfolio-app:${{ INPUT_TAG-VERSION }}
+          docker push ${{ github.actor }}/myapp
