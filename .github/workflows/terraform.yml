@@ -1,7 +1,7 @@
 name: "Terraform"
-on:
-  push:
-    branches: [master]
+on: workflow_dispatch
+#   push:
+#     branches: [master]
 
 env:
   tf_actions_working_dir: terraform/
@@ -12,11 +12,10 @@ env:
 
 jobs:
   plan-tf-infra:
-    if: ${{ false }} # disable for now
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ${{ env.tf_actions_working_dir }} # remove?
+        working-directory: ${{ env.tf_actions_working_dir }}
     permissions:
       pull-requests: write
       contents: read
